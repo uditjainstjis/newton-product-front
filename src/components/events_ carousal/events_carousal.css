@@ -78,7 +78,7 @@ body {
 }
 
 .swiper-slide {
-  width: 38rem;
+  width: 45rem !important;
   height: 23rem;
   position: relative;
   
@@ -198,6 +198,14 @@ body {
     height: 100%;
   }
 
+/*   
+ .swiper-slide{
+    border: 2px solid green;
+    width: 500px !important;
+  } */
   
   
-  
+  .mySwiper {
+    height: 60vh;
+    margin: 10vh 0 10vh 0;
+  }

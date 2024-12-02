@@ -45,23 +45,23 @@ function EventSlider() {
         className="mySwiper"
       >
         <SwiperSlide >
-          <div className='imgcont' style={{ width: '350px' }}>
-             <img src={myimg} alt='container' style={{ width: '350px' }}/>
+          <div className='imgcont' >
+             <img src={myimg} alt='container' />
           </div>
         </SwiperSlide>
         <SwiperSlide >
-        <div className='imgcont' style={{ width: '350px' }}>
-             <img src={myimg} alt='container' style={{ width: '350px' }}/>
+        <div className='imgcont' >
+             <img src={myimg} alt='container' />
           </div>
         </SwiperSlide>
         <SwiperSlide >
-        <div className='imgcont' style={{ width: '350px' }}>
-             <img src={myimg} alt='container' style={{ width: '350px' }}/>
+        <div className='imgcont' >
+             <img src={myimg} alt='container' />
           </div>
         </SwiperSlide>
         <SwiperSlide >
-        <div className='imgcont' style={{ width: '350px' }}>
-             <img src={myimg} alt='container' style={{ width: '350px' }}/>
+        <div className='imgcont' >
+             <img src={myimg} alt='container' />
           </div>
         </SwiperSlide>
        
