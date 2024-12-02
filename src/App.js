@@ -1,3 +1,13 @@
+import EventSlider from "./components/events_ carousal/events_carousal"
+
+
 export default function App() {
-  return (<div></div>)
+  return (
+      <div>
+        
+      <EventSlider></EventSlider>
+      </div>
+      
+    )
 }
+
