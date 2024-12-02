@@ -1,5 +1,6 @@
 import EventSlider from "./components/events_ carousal/events_carousal"
 import Navbar from "./components/Navbar"
+import OrgLogo from "./components/OrgLogo"
 
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
       <div>
         <Navbar/>
       <EventSlider/>
+      <OrgLogo/>
       </div>
       
     )
