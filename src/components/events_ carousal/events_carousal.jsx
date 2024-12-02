@@ -1,17 +1,17 @@
 import React from 'react';
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../events_ carousal/events_carousal.css'
 import myimg from '../../assets/Group 6.png'
+import ru from '../../assets/RULogo.svg'
 
 
-// import required modules
 import { EffectCoverflow,Navigation } from 'swiper/modules';
 
 function EventSlider() {
@@ -31,15 +31,16 @@ function EventSlider() {
         spaceBetween={20}
         coverflowEffect={{
           rotate: -30,
-          stretch: 0,
+          stretch: -50,
           depth: 100,
           modifier: 1,
           slideShadows: true,
-          scale:0.6
+          scale:0.7
           
         }}
         
         navigation={true}
+        pagination={true}
         modules={[EffectCoverflow,Navigation]}
        
         className="mySwiper"
@@ -47,21 +48,26 @@ function EventSlider() {
         <SwiperSlide >
           <div className='imgcont' >
              <img src={myimg} alt='container' />
+             {/* <img src={ru} alt='logo' className='logo_top'/> */}
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide >
         <div className='imgcont' >
              <img src={myimg} alt='container' />
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide >
         <div className='imgcont' >
              <img src={myimg} alt='container' />
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide >
         <div className='imgcont' >
              <img src={myimg} alt='container' />
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
        
@@ -69,6 +75,8 @@ function EventSlider() {
       </Swiper>
     </>
   );
+
+
 }
 
 
