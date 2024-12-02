@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../events_ carousal/events_carousal.css'
 import myimg from '../../assets/Group 6.png'
-
+import ru from '../../assets/RULogo.svg'
 
 
 import { EffectCoverflow,Navigation } from 'swiper/modules';
@@ -48,21 +48,26 @@ function EventSlider() {
         <SwiperSlide >
           <div className='imgcont' >
              <img src={myimg} alt='container' />
+             {/* <img src={ru} alt='logo' className='logo_top'/> */}
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide >
         <div className='imgcont' >
              <img src={myimg} alt='container' />
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide >
         <div className='imgcont' >
              <img src={myimg} alt='container' />
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide >
         <div className='imgcont' >
              <img src={myimg} alt='container' />
+             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
           </div>
         </SwiperSlide>
        
