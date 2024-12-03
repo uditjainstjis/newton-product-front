@@ -6,7 +6,8 @@ import Raj from '../assets/image 2.svg'
 function Clan() {
     return(
     <>
-        <div className='text-center text-[1.5vw] text-blue-50 mb-[5vh] flex justify-center'>
+        
+        <div className='text-center text-[1.5vw] text-blue-50 mb-[5vh] flex justify-center p-[5px]'>
             
                 CLANS
             
