@@ -8,19 +8,20 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../events_ carousal/events_carousal.css'
-import myimg from '../../assets/Group 6.png'
+import Details from './slider_detail';
 
 
 
 
-import { EffectCoverflow,Navigation } from 'swiper/modules';
+import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 function EventSlider() {
   return (
     <>
       <Swiper
-        effect={'coverflow'}
        
+        effect={'coverflow'}
+
         simulateTouch={true}
         initialSlide={2}
         grabCursor={true}
@@ -29,6 +30,7 @@ function EventSlider() {
         loop={true}
         loopFillGroupWithBlank={true}
         loopedSlides={3}
+        autoplay={true}
         spaceBetween={20}
         coverflowEffect={{
           rotate: -30,
@@ -37,50 +39,33 @@ function EventSlider() {
           modifier: 1,
           slideShadows: true,
           scale:0.7
-          
+
         }}
-        
+
         navigation={true}
         pagination={true}
-        modules={[EffectCoverflow,Navigation]}
-       
+        
+
+        modules={[EffectCoverflow, Navigation]}
+
         className="mySwiper"
       >
-        <SwiperSlide >
-          <div className='imgcont' >
-             <img src={myimg} alt='container' /> <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
-             {/* <img src={ru} alt='logo' className='logo_top'/> */}
-            
-             
-             
-          </div>
+        <SwiperSlide className="bg-white ml-[8px] h-[15vh] ">
+          
+            <Details/>
+        </SwiperSlide >
+        <SwiperSlide className="bg-white ml-[8px] h-[15vh]">
+            <Details/>
         </SwiperSlide>
-        <SwiperSlide >
-        <div className='imgcont' >
-             <img src={myimg} alt='container' />
-             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
-          </div>
+        <SwiperSlide className="bg-white ml-[8px] h-[15vh]">
+            <Details/>
         </SwiperSlide>
-        <SwiperSlide >
-        <div className='imgcont' >
-             <img src={myimg} alt='container' />
-             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
-          </div>
+        <SwiperSlide className="bg-white ml-[8px] h-[15vh]">
+            <Details/>
         </SwiperSlide>
-        <SwiperSlide >
-        <div className='imgcont' >
-             <img src={myimg} alt='container' />
-             <div className="carousal-top h-[15vh] w-[20vw] bg-white ml-[8px]"></div>
-          </div>
-        </SwiperSlide>
-       
-        
       </Swiper>
     </>
   );
-
-
 }
-
 
 export default EventSlider

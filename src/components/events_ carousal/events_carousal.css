@@ -1,5 +1,4 @@
-
- *,
+*,
 *::before,
 *::after {
   margin: 0;
@@ -37,27 +36,6 @@ html {
   }
 }
 
-::-webkit-scrollbar {
-  width: 1.3rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background: #797979;
-  transition: all 0.5s ease-in-out;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #222224;
-}
-
-::-webkit-scrollbar-track {
-  background: #f9f9f9;
-}
-
-
- 
-
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -70,7 +48,19 @@ html {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 130px;
+  height: 23vh!important;
+  margin: 40px 20px 0 0 !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .swiper-slide img {
@@ -82,16 +72,4 @@ html {
   transform: scale(1.7) !important; 
   z-index: 10;          
   
-}
-
-.imgcont {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.carousal-top {
-  position: absolute;
-  top: 30px;
-  left: 30;
 }

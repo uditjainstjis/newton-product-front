@@ -15,7 +15,7 @@ const Navbar = () => {
           effect="blur"
           placeholderSrc={Logo}
           alt="Logo"
-          className="w-12 h-12" // Adjust based on logo size
+          className="w-24" // Adjust based on logo size
         />
       </div>
 

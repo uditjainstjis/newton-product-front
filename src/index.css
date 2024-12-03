@@ -6,5 +6,19 @@
 body{
     background-color: black;
     background-size: cover;
-   
+   margin: 0rem 3rem;
+}
+
+::-webkit-scrollbar {
+    width: .1rem;
+}
+::-webkit-scrollbar-thumb {
+    border: 5px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+    background: gray;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
