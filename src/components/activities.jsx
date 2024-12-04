@@ -35,10 +35,10 @@ function Activities() {
 
                 <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw] heading">Activities</div>
                 <div className="h-[5vh] w-[80%] flex items-center justify-center mb-[8px]">
-                    <div className="h-[2.2vw] w-[40%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px]">
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl">Upcoming</div>
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl">Ongoing</div>
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl">Past</div>
+                    <div className="h-[2.2vw] w-[40%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px] border border-white/20 pt-[2px] pb-[2px]">
+                        <div className="w-[30%] h-[80%] flex items-center justify-center text-xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl font-black hover:rounded-xl">Upcoming</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center text-xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl font-black hover:rounded-xl">Ongoing</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center text-xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl font-black hover:rounded-xl">Past</div>
                     </div>
                     <div className="ml-auto">
                         <select className=" text-xl w-[80px] h-[30px] text-center bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
@@ -54,7 +54,7 @@ function Activities() {
                     {Event ? (<><div className="grid place-items-center gap-10 overflow-y-scroll h-[95%] scrollbar-hide pt-[5px]">
 
                                                     {Events && Events[0] && Events.map((event) => {
-                            const [day, month] = event.day.split(" "); // Split the day and month
+                            const [day, month] = event.day.split(" "); 
                             return (
                                 <div
                                 key={event._id}
@@ -62,9 +62,9 @@ function Activities() {
                                 onClick={() => handleRedirect(event._id)}
                                 >
                                 <div className="date text-center w-[15%] h-[60px] pl-[10px] font-extrabold">
-                                    <span className='text-5xl'>{day}</span> {/* Display the day */}
-                                    
-                                    <span className='text-3xl'>{month}</span> {/* Display the month */}
+                                    <span className='text-5xl'>{day}</span> 
+                                    <br/>
+                                    <span className='text-3xl'>{month}</span> 
                                 </div>
                                 <div className="add w-[20%] pl-[15px] pr-[5px]">
                                     <div className="time text-sm flex items-center mb-3">
@@ -80,7 +80,7 @@ function Activities() {
                                     <div className="event_name text-2xl font-black">{event.name}</div>
                                     <div className="event_desc text-[0.875rem] text-[#bdb3b3]">{event.description}</div>
                                 </div>
-                                <div className="type text-center -rotate-90 text-4xl w-[12%]">{event.type}</div>
+                                <div className="type text-center -rotate-90 text-3xl w-[12%] heading pt-[10px]">{event.type}</div>
                                 </div>
                             );
                             })}
