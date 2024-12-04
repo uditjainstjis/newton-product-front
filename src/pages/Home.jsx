@@ -3,6 +3,7 @@ import OrgLogo from "../components/OrgLogo";
 import Clan from "../components/clans";
 import Activities from "../components/activities";
 import Leaderboard from "../components/leaderboard";
+import ClubComponent from "../components/club";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         <OrgLogo/>
         <Activities/>
         <Clan/>
+        <ClubComponent/>
         <Leaderboard/>
         
       </div>

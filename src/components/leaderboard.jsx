@@ -37,6 +37,8 @@ function Leaderboard() {
           },
       ];
 
+      
+
 
     return(
         <div className="flex flex-col items-center justify-center mb-[2vw] ">
@@ -45,11 +47,11 @@ function Leaderboard() {
             <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[50vh] w-[80%] ">
                 <div className="flex h-[4vw] mt-[1vw] ml-[1vw] mb-[0.5vw] ">
                     <div className="h-[2.2vw] w-[70%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px] pl-[10px] pr-[10px]">
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Chola</div>
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Maratha</div>
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Rajputana</div>
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Vijaya</div>
-                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">All</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl">Chola</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Maratha</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Rajputana</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Vijaya</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">All</div>
                     </div>
                     <select className=" ml-auto text-2xl w-[80px] h-[30px] text-center mr-10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
                         <option>Week</option>
@@ -59,13 +61,13 @@ function Leaderboard() {
                    
                     {events.map((event, index) => (
                          <div className="h-[5vw] w-[90%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105">
-                         <div className="date text-4xl text-center w-[15%] border-r border-r-white h-[60px]">{event.date}</div>
+                         <div className="date text-3xl text-center w-[15%] h-[60px] pl-[10px] pr-[5px] flex items-center justify-center">{event.date}</div>
                          
-                         <div className="add text-center w-[20%] ">
-                             <div className="time text-l">{event.time}</div>
-                             <div className="location text-l">{event.location}</div>
+                         <div className="add text-center w-[20%] pl-[5px] pr-[5px]">
+                             <div className="time text-s">{event.time}</div>
+                             <div className="location text-s">{event.location}</div>
                          </div>
-                         <div className="desc w-[55%] border-r border-r-white border-l border-l-white pl-[10px] pr-[10px]">
+                         <div className="desc w-[61%] pl-[5px]">
                              <div className="event_name text-2xl">{event.title}</div>
                              <div className="event_desc">{event.description}</div>
                          </div>
