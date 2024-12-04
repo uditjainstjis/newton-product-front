@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-
+import { useState,useEffect } from 'react';
+import time from "../assets/time.svg"
+import location from "../assets/location.svg"
 
 function Activities() {
 
@@ -48,28 +49,42 @@ function Activities() {
                     </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[55vh] w-[80%] p-[12px]">
+                <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[50vh] w-[80%] pt-[20px] pb-[20px] pl-[20px] pr-[20px]">
 
-                    {Event ? (<><div className="grid place-items-center gap-12 overflow-y-scroll h-[100%] scrollbar-hide pt-[5px]">
+                    {Event ? (<><div className="grid place-items-center gap-10 overflow-y-scroll h-[95%] scrollbar-hide pt-[5px]">
 
-                        {Events && Events[0] && Events.map((event) => (
-                            <div
+                                                    {Events && Events[0] && Events.map((event) => {
+                            const [day, month] = event.day.split(" "); // Split the day and month
+                            return (
+                                <div
                                 key={event._id}
-                                className="h-[5vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl border border-white/20 shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105"
+                                className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105"
                                 onClick={() => handleRedirect(event._id)}
-                            >
-                                <div className="date text-3xl text-center w-[15%] h-[60px] pl-[10px]">{event.day}</div>
-                                <div className="add text-center w-[20%] pl-[5px] pr-[5px]">
-                                    <div className="time text-s">{event.time}</div>
-                                    <div className="location text-s">{event.address}</div>
+                                >
+                                <div className="date text-center w-[15%] h-[60px] pl-[10px] font-extrabold">
+                                    <span className='text-5xl'>{day}</span> {/* Display the day */}
+                                    
+                                    <span className='text-3xl'>{month}</span> {/* Display the month */}
                                 </div>
-                                <div className="desc w-[61%] pl-[10px]">
-                                    <div className="event_name text-2xl">{event.name}</div>
-                                    <div className="event_desc">{event.description}</div>
+                                <div className="add w-[20%] pl-[15px] pr-[5px]">
+                                    <div className="time text-sm flex items-center mb-3">
+                                    <img src={time} alt='time' className='h-5 w-5 pr-[4px]' />
+                                    {event.time}
+                                    </div>
+                                    <div className="location text-sm flex items-center">
+                                    <img src={location} alt='location' className='h-5 w-5 pr-[4px]' />
+                                    {event.address}
+                                    </div>
                                 </div>
-                                <div className="type text-center -rotate-90 text-4xl">{event.type}</div>
-                            </div>
-                        ))}
+                                <div className="desc w-[50%] pl-[10px] border-r pr-[10px]">
+                                    <div className="event_name text-2xl font-black">{event.name}</div>
+                                    <div className="event_desc text-[0.875rem] text-[#bdb3b3]">{event.description}</div>
+                                </div>
+                                <div className="type text-center -rotate-90 text-4xl w-[12%]">{event.type}</div>
+                                </div>
+                            );
+                            })}
+
 
 
                     </div></>) : (<><h3 className='text-white'>No events found</h3></>)}
