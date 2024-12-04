@@ -41,7 +41,7 @@ function Leaderboard() {
     return(
         <div className="flex flex-col items-center justify-center mb-[2vw] ">
             
-            <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw]">Leaderboard</div>
+            <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw] heading">Leaderboard</div>
             <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[50vh] w-[80%] ">
                 <div className="flex h-[4vw] mt-[1vw] ml-[1vw] mb-[0.5vw] ">
                     <div className="h-[2.2vw] w-[70%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px] pl-[10px] pr-[10px]">
