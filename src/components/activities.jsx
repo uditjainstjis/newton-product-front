@@ -13,14 +13,14 @@ function Activities() {
             .then(response => response.json())
             .then(data => {
                 console.log(data.data);
-                
-                setEvents(data.data); 
+
+                setEvents(data.data);
             })
             .catch(error => {
                 console.error("Error fetching events:", error);
             });
     }, []);
-    
+
 
 
     const handleRedirect = (id) => {
@@ -33,28 +33,30 @@ function Activities() {
             <div id="events" className="flex flex-col items-center justify-center mb-[2vw] ">
 
                 <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw] heading">Activities</div>
-                <div className="h-[2.2vw] w-[40%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px]">
-                            <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl">Upcoming</div>
-                            <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl">Ongoing</div>
-                            <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl">Past</div>
-                        </div>
-                <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[50vh] w-[80%] ">
-                    <div className="flex h-[4vw] mt-[1vw] ml-[1vw] mb-[0.5vw] ">
-                        <select className=" ml-auto text-xl w-[80px] h-[30px] text-center mr-10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
+                <div className="h-[5vh] w-[80%] flex items-center justify-center mb-[8px]">
+                    <div className="h-[2.2vw] w-[40%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px]">
+                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl">Upcoming</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl">Ongoing</div>
+                        <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white hover:bg-white hover:text-black cursor-pointer rounded-xl">Past</div>
+                    </div>
+                    <div className="ml-auto">
+                        <select className=" text-xl w-[80px] h-[30px] text-center bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
                             <option>Week</option>
                             <option>This week</option>
                             <option value="">Last week</option>
                         </select>
-                        
-
                     </div>
-                    {Event ? (<><div className="grid place-items-center gap-12 overflow-y-scroll h-[36vh] scrollbar-hide pt-[5px]">
+                </div>
 
-                        {Events&& Events[0]&&Events.map((event) => (
+                <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[55vh] w-[80%] p-[12px]">
+
+                    {Event ? (<><div className="grid place-items-center gap-12 overflow-y-scroll h-[100%] scrollbar-hide pt-[5px]">
+
+                        {Events && Events[0] && Events.map((event) => (
                             <div
                                 key={event._id}
-                                className="h-[5vw] w-[90%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl border border-white/20 shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105"
-                                onClick={() => handleRedirect(event._id)} 
+                                className="h-[5vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl border border-white/20 shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105"
+                                onClick={() => handleRedirect(event._id)}
                             >
                                 <div className="date text-3xl text-center w-[15%] h-[60px] pl-[10px]">{event.day}</div>
                                 <div className="add text-center w-[20%] pl-[5px] pr-[5px]">
@@ -78,4 +80,4 @@ function Activities() {
     )
 }
 
-    export default Activities;
+export default Activities;
