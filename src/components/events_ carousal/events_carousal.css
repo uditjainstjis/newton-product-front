@@ -48,13 +48,13 @@ html {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 23vh!important;
+  height: 20vh!important;
   margin: 40px 20px 0 0 !important;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   border-radius: 20px;
   border:1px solid rgba(255, 255, 255, 0.18);
   /* box-shadow: 0 8px 32px 1 rgba(0, 0, 0, 0.37); */
-
+  font-size: 0.7rem !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -71,3 +71,4 @@ html {
   z-index: 10;          
   
 }
+
