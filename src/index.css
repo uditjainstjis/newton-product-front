@@ -2,11 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'WS-bind';
+    src: url('./assets/fonts/wsbindregular-j9ebo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('./assets/fonts/Geist-Regular.ttf') format('truetype');
+}
+
 
 body{
     background-color: black;
+    background-image: url('./assets/images/bg.jpg');
     background-size: cover;
    margin: 0rem 3rem;
+   font-family: 'Geist';
+}
+
+.heading{
+    font-family: 'WS-bind';
 }
 
 ::-webkit-scrollbar {
@@ -22,3 +38,38 @@ body{
 ::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: #fff;
+  }
+  
+  .not-found-content {
+    text-align: center;
+  }
+  
+  .not-found-title {
+    font-size: 12rem;
+    margin-bottom: 1rem;
+
+  }
+  
+  .not-found-text {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .not-found-link {
+    color: rgba(255, 255, 255, 0.891);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.2s;
+  }
+  
+  .not-found-link:hover {
+    border: 1px solid white;
+    padding: 5px 8px;
+  }

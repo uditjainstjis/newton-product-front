@@ -7,7 +7,7 @@ function Clan() {
     return(
     <>
         
-        <div id="clans"  className='text-center text-[1.5vw] text-blue-50 mb-[5vh] flex justify-center p-[5px]'>
+        <div id="clans"  className='text-center text-[1.5vw] text-blue-50 mb-[5vh] flex justify-center p-[5px] heading'>
             
                 CLANS
             
