@@ -1,24 +1,24 @@
-import EventSlider from "./components/events_ carousal/events_carousal"
 import Navbar from "./components/Navbar"
-import OrgLogo from "./components/OrgLogo"
-import Clan from "./components/clans"
-import Footer from "./components/footer"
-import Activities from "./components/activities"
-import Leaderboard from "./components/leaderboard"
+import Home from "./pages/Home"
+import Events from "./pages/Events"
+import RegistrationForm from "./components/RegistrationForm";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-      <div>
-        <Navbar/>
-        <EventSlider/>
-        <OrgLogo/>
-        <Activities/>
-        <Clan/>
-        <Leaderboard/>
-        <Footer/>
-      </div>
-      
-    )
+    <div>
+
+      <Navbar/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/events/register" element={<RegistrationForm/>}/>
+        </Routes>
+      </Router>
+
+    </div>
+  )
 }
 
 export default App;

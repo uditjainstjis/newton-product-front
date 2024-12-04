@@ -21,7 +21,7 @@ const Navbar = () => {
 
       {/* Desktop navigation links */}
       <ul className="hidden md:flex list-none gap-8 rounded-full bg-white/10 px-8 py-4 h-16 items-center">
-        <li><a href="#home" className="hover:bg-white/20 py-2 px-4 rounded transition duration-300">Home</a></li>
+        <li><a href="/" className="hover:bg-white/20 py-2 px-4 rounded transition duration-300">Home</a></li>
         <li><a href="#events" className="hover:bg-white/20 py-2 px-4 rounded transition duration-300">Events</a></li>
         <li><a href="#clubs" className="hover:bg-white/20 py-2 px-4 rounded transition duration-300">Clubs</a></li>
         <li><a href="#clans" className="hover:bg-white/20 py-2 px-4 rounded transition duration-300">Clans</a></li>
@@ -39,7 +39,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} absolute top-16 left-0 w-full bg-black/70 text-white`}>
         <ul className="flex flex-col items-center py-4">
-          <li><a href="#home" className="py-2 px-4">Home</a></li>
+          <li><a href="/" className="py-2 px-4">Home</a></li>
           <li><a href="#events" className="py-2 px-4">Events</a></li>
           <li><a href="#clubs" className="py-2 px-4">Clubs</a></li>
           <li><a href="#clans" className="py-2 px-4">Clans</a></li>

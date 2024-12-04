@@ -36,7 +36,7 @@ function Activities() {
 
 
     return(
-        <div className="flex flex-col items-center justify-center mb-[2vw] ">
+        <div id="events" className="flex flex-col items-center justify-center mb-[2vw] ">
             
             <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw]">Activities</div>
             <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[50vh] w-[80%] ">
