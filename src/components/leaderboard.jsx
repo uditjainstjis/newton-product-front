@@ -44,23 +44,27 @@ function Leaderboard() {
         <div className="flex flex-col items-center justify-center mb-[2vw] ">
             
             <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw] heading">Leaderboard</div>
-            <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[50vh] w-[80%] ">
-                <div className="flex h-[4vw] mt-[1vw] ml-[1vw] mb-[0.5vw] ">
-                    <div className="h-[2.2vw] w-[70%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px] pl-[10px] pr-[10px]">
+            <div className="h-[5vh] w-[80%] flex items-center justify-center mb-[8px]">
+            <div className="h-[2.2vw] w-[70%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px] pl-[10px] pr-[10px]">
                         <div className="w-[30%] h-[80%] flex items-center justify-center text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl">Chola</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Maratha</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Rajputana</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Vijaya</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-2xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">All</div>
                     </div>
-                    <select className=" ml-auto text-2xl w-[80px] h-[30px] text-center mr-10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
-                        <option>Week</option>
-                    </select>
+                    <div className="ml-auto">
+                        <select className=" text-xl w-[80px] h-[30px] text-center bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
+                            <option>Week</option>
+                            <option>This week</option>
+                            <option value="">Last week</option>
+                        </select>
+                    </div>
                 </div>
-                <div className="grid place-items-center gap-12 overflow-y-scroll h-[36vh] scrollbar-hide pt-[5px]">
+            <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[55vh] w-[80%] p-[12px]">
+                <div className="grid place-items-center gap-12 overflow-y-scroll h-[100%] scrollbar-hide pt-[5px]">
                    
                     {events.map((event, index) => (
-                         <div className="h-[5vw] w-[90%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105">
+                         <div className="h-[5vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105">
                          <div className="date text-3xl text-center w-[15%] h-[60px] pl-[10px] pr-[5px] flex items-center justify-center">{event.date}</div>
                          
                          <div className="add text-center w-[20%] pl-[5px] pr-[5px]">
