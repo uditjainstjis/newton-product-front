@@ -49,23 +49,29 @@ body{
   
   .not-found-content {
     margin: 0 auto;
+    text-align: center;
   }
 
   .logo{
     margin: 0 auto;
+    height: 40%;
+    width: 40%;
   }
   
   .not-found-title {
     font-size: 12rem;
-    margin-bottom: 1rem;
-
   }
   
   .not-found-text {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
   
+  .not-found-subtext{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+  }
+
   .not-found-link {
     color: rgba(255, 255, 255, 0.891);
     text-decoration: none;

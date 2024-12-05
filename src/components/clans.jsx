@@ -18,7 +18,7 @@ function Clan() {
       </div>
       <div className="clans flex justify-evenly px-[5vw]">
         {clans.map((clan, index) => (
-          <div style={{border:"2px solid rgba(0,0,0,1)", boxShadow: "2px 3px 10px black"}} key={index} className="rounded-full h-[12rem] w-[12rem]">
+          <div style={{boxShadow: "2px 3px 10px black"}} key={index} className="rounded-full h-[12rem] w-[12rem]">
             <img src={clan.src} alt={clan.alt} className="rounded-full w-full h-full object-cover" />
           </div>
         ))}
