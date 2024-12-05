@@ -1,18 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @font-face {
     font-family: 'WS-bind';
     src: url('./assets/fonts/wsbindregular-j9ebo.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'Geist';
     src: url('./assets/fonts/Geist-Regular.ttf') format('truetype');
 }
-
-
 body{
     background-color: black;
     background-image: url('./assets/images/bg2.png');
@@ -20,11 +16,9 @@ body{
    /* margin: 0rem 3rem; */
    font-family: 'Geist';
 }
-
 .heading{
     font-family: 'WS-bind';
 }
-
 ::-webkit-scrollbar {
     width: .1rem;
 }
@@ -34,81 +28,67 @@ body{
     background-clip: content-box;
     background: gray;
 }
-
 ::-webkit-scrollbar-track {
     background-color: transparent;
 }
-
 .not-found-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 65vh;
     color: #fff;
   }
-  
   .not-found-content {
     margin: 0 auto;
     text-align: center;
   }
-
   .logo{
     margin: 0 auto;
     height: 40%;
     width: 40%;
   }
-  
   .not-found-title {
     font-size: 12rem;
   }
-  
   .not-found-text {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-  
   .not-found-subtext{
     color: rgba(255, 255, 255, 0.8);
     font-size: 1.3rem;
   }
-
   .not-found-link {
     color: rgba(255, 255, 255, 0.891);
     text-decoration: none;
     font-size: 1.2rem;
     transition: 0.2s;
   }
-  
   .not-found-link:hover {
     border: 1px solid white;
     padding: 5px 8px;
   }
-
   .section-gap{
     margin-top: 7rem;
   }
-
   .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Ensure the content is aligned to the bottom */
     height: 100%;
 }
-
 .footer-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 footer i {
     font-size: 1.2rem;
     margin: 0 10px;
     cursor: pointer;
     transition: transform 0.2s;
 }
-
 footer i:hover {
     transform: scale(1.1); /* Add hover effect */
 }
