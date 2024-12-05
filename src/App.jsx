@@ -58,8 +58,8 @@ function App() {
   return (
     <div>
 
-      <Navbar />
       <Router>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events/:id" element={<Events />} /> {/* Dynamic route */}
@@ -67,8 +67,8 @@ function App() {
           <Route path="*" element={<NotFound />} />        
         </Routes>
 
-      </Router>
       <Footer />
+      </Router>
 
     </div>
   )

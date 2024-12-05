@@ -19,7 +19,6 @@ body{
     background-size: cover;
    /* margin: 0rem 3rem; */
    font-family: 'Geist';
-   margin: 0 auto;
 }
 
 .heading{
@@ -54,7 +53,6 @@ body{
 
   .logo{
     margin: 0 auto;
-    margin-bottom: 1rem;
   }
   
   .not-found-title {
@@ -66,6 +64,18 @@ body{
   .not-found-text {
     font-size: 1.6rem;
     margin-bottom: 2rem;
+  }
+  
+  .not-found-link {
+    color: rgba(255, 255, 255, 0.891);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.2s;
+  }
+  
+  .not-found-link:hover {
+    border: 1px solid white;
+    padding: 5px 8px;
   }
 
   .section-gap{
