@@ -58,7 +58,7 @@ function Activities() {
                             return (
                                 <div
                                 key={event._id}
-                                className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105"
+                                className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer"
                                 onClick={() => handleRedirect(event._id)}
                                 >
                                 <div className="date text-center w-[15%] h-[60px] pl-[10px] font-extrabold">
