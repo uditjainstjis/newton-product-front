@@ -15,6 +15,7 @@ function Activities() {
       .then((data) => {
         setEvents(data.data || []);
         setFilteredEvents(filterEvents(data.data || [], "Upcoming"));
+      
       })
       .catch((error) => {
         console.error("Error fetching events:", error);
@@ -30,7 +31,8 @@ function Activities() {
     const currentDate = new Date();
 
     return events.filter((event) => {
-      const eventDate = new Date(event.day); // Assuming `event.date` is in a valid ISO format
+      if(event.Activated){
+        const eventDate = new Date(event.day); // Assuming `event.date` is in a valid ISO format
 
       switch (category) {
         case "Upcoming":
@@ -42,6 +44,7 @@ function Activities() {
           return eventDate < currentDate;
         default:
           return true;
+      }
       }
     });
   };
@@ -78,7 +81,7 @@ function Activities() {
           {filteredEvents.length > 0 ? (
             <div className="grid place-items-center gap-10 overflow-y-scroll h-[95%] scrollbar-hide pt-[5px]">
               {filteredEvents.map((event) => {
-                const [day, month] = event.day.split(" ");
+                
 
                 const [_, monthNumber, monthDate] = event.day.split("-"); 
                             
