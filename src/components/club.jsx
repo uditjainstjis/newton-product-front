@@ -32,12 +32,13 @@ const ClubOMembers = ({ members }) => {
   return members.map((member, index) => (
     <div
       key={index}
-      className="w-[150px] h-[150px] rounded-full shadow-md flex items-center justify-center"
+      className="w-[100px] h-[100px] rounded-full shadow-md flex items-center justify-center"
+      style={{border:"2px solid rgba(0,0,0,1)", boxShadow: "2px 3px 20px rgba(0,0,0,.5)"}}
     >
       <img
         src={member.Image}
         alt={member.Name}
-        className="h-[70%] w-[70%] rounded-full object-cover mx-auto"
+        className="h-[100%] w-[100%] rounded-full object-cover mx-auto"
       />
     </div>
   ));

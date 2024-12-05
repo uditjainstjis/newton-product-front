@@ -28,6 +28,7 @@ function EventSlider() {
     navigate(`/events/register/${id}`);
   }, [navigate]);
 
+ 
   return (
     <Swiper
       effect='coverflow'
@@ -55,7 +56,7 @@ function EventSlider() {
       className="mySwiper"
     >
       {data.map((event) => (
-        <SwiperSlide key={event.id} className="bg-white ml-[8px] h-[15vh]">
+        <SwiperSlide style={{ boxShadow: "2px 3px 10px rgba(0,0,0,.5)"}} key={event.id} className="bg-white ml-[8px] h-[15vh]">
           <div className='items-center justify-center m-[10px] w-[10vh] h-[10vh]'>
             <img src={image} alt="Event logo" />
           </div>

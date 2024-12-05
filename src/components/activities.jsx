@@ -51,6 +51,7 @@ function Activities() {
     setFilteredEvents(filterEvents(events, category));
   };
 
+  
 
   return (
     <div>
@@ -78,16 +79,26 @@ function Activities() {
             <div className="grid place-items-center gap-10 overflow-y-scroll h-[95%] scrollbar-hide pt-[5px]">
               {filteredEvents.map((event) => {
                 const [day, month] = event.day.split(" ");
+
+                const [_, monthNumber, monthDate] = event.day.split("-"); 
+                            
+                const monthNames = [
+                "January", "February", "March", "April", "May", "June", 
+                "July", "August", "September", "October", "November", "December"
+                ];
+
+                const monthName = monthNames[parseInt(monthNumber, 10) - 1];
                 return (
                   <div
                     key={event._id}
                     className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer"
                     onClick={() => handleRedirect(event._id)}
+                    style={{ boxShadow: "2px 3px 5px rgba(0,0,0,.5)"}}
                   >
                     <div className="date text-center w-[15%] h-[60px] pl-[10px] font-extrabold">
-                      <span className="text-5xl">{day}</span>
+                      <span className="text-5xl">{monthDate}</span>
                       <br />
-                      <span className="text-3xl">{month}</span>
+                      <span className="text-3xl">{monthName}</span>
                     </div>
                     <div className="add w-[20%] pl-[15px] pr-[5px]">
                       <div className="time text-sm flex items-center mb-3">

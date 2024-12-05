@@ -71,7 +71,7 @@ function Leaderboard() {
                 <div className="grid place-items-center gap-12 overflow-y-scroll h-[100%] scrollbar-hide pt-[5px]">
                    
                     {events.map((event, index) => (
-                         <div className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer">
+                         <div className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer " style={{ boxShadow: "2px 3px 5px rgba(0,0,0,.5)"}}>
                          <div className="date text-center w-[15%] h-[60px] pl-[10px] font-extrabold">
                             <span className="text-5xl mb-10">{event.date}</span><br/><span className="text-3xl">{event.month}</span></div>
                          
