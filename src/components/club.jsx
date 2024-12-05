@@ -12,7 +12,9 @@ const FilterButton = ({ label, onClick }) => (
 
 const ClubPMembers = ({ members }) => {
   return members.map((member, index) => (
-    <div key={index} className="w-60 h-[230px] !rounded-2xl shadow-md text-center">
+    <div key={index} className="w-60 h-[230px] !rounded-2xl shadow-md text-center" style={{
+      borderRadius: "10px",
+    }}>
       <img
         src={member.Image}
         alt={member.Name}

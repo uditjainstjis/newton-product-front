@@ -1,5 +1,5 @@
 import '../index.css'
-import logo from "../assets/images/logo.svg"
+import logo from "../assets/images/404vect.png"
 
 function NotExist() {
     return(
@@ -8,7 +8,10 @@ function NotExist() {
       <div className="not-found-content">
         <img src={logo} alt="" srcset="" className='logo' />
         <p className="not-found-text">
-          Sorry! The page is not available for small screens.
+          We don't support small screens currently!
+        </p>
+        <p className="not-found-subtext">
+          Switch to desktop for a better viewing experience.
         </p>
        
       </div>
