@@ -84,7 +84,7 @@ const ClubComponent = () => {
         <ClubPMembers
           members={clubData.flatMap((club) => [
             { Name: club.President.Name, Image: club.President.Image, Role: "President" },
-            { Name: club["Vice-President"].Name, Image: club["Vice-President"].Image, Role: "Vice President" }
+            { Name: club["Vice_President"].Name, Image: club["Vice_President"].Image, Role: "Vice President" }
           ])}
         />
       </div>
