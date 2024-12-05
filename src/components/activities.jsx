@@ -54,11 +54,22 @@ function Activities() {
                     {Event ? (<><div className="grid place-items-center gap-10 overflow-y-scroll h-[95%] scrollbar-hide pt-[5px]">
 
                                                     {Events && Events[0] && Events.map((event) => {
-                            const [day, month] = event.day.split(" "); 
+                            
+
+                           
+                            const [_, monthNumber, day] = event.day.split("-"); 
+                            
+                            const monthNames = [
+                            "January", "February", "March", "April", "May", "June", 
+                            "July", "August", "September", "October", "November", "December"
+                            ];
+
+                            const month = monthNames[parseInt(monthNumber, 10) - 1];
+                            
                             return (
                                 <div
                                 key={event._id}
-                                className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer"
+                                className="h-[6vw] w-[95%] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-xl shadow-xl text-white flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer" style={{ boxShadow: "2px 3px 5px rgba(0,0,0,.5)"}}
                                 onClick={() => handleRedirect(event._id)}
                                 >
                                 <div className="date text-center w-[15%] h-[60px] pl-[10px] font-extrabold">

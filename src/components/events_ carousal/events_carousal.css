@@ -41,6 +41,7 @@ html {
   justify-content: center;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   font-size: 0.7rem !important;
+  
 }
 
 .swiper-slide-shadow-left, .swiper-slide-shadow-right{
@@ -58,7 +59,6 @@ html {
 }
 
 .swiper-slide .event-info {
-  backdrop-blur: 0px;
   background: transparent;
   border-radius: 20px;
   padding: 2px 20px;
@@ -87,5 +87,5 @@ html {
 
 .button-container .learn-more-button {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-blur: 15px;
+  
 }
