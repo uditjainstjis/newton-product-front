@@ -46,9 +46,9 @@ function Leaderboard() {
 
 
     return(
-        <div className="flex flex-col items-center justify-center mb-[2vw] ">
+        <div className="flex flex-col items-center justify-center mb-[2vw] section-gap">
             
-            <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw] heading">Leaderboard</div>
+            <div className="text-white text-center text-5xl mt-[2vw] mb-[2vw] heading">Leaderboard</div>
 
             
             <div className="h-[5vh] w-[80%] flex items-center justify-center mb-[8px]">

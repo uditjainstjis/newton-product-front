@@ -33,7 +33,7 @@ function Activities() {
         <div>
             <div id="events" className="flex flex-col items-center justify-center mb-[2vw] ">
 
-                <div className="text-white text-center text-4xl mt-[2vw] mb-[2vw] heading">Activities</div>
+                <div className="text-white text-center text-5xl mt-[2vw] mb-[2vw] heading">Activities</div>
                 <div className="h-[5vh] w-[80%] flex items-center justify-center mb-[8px]">
                     <div className="h-[2.2vw] w-[40%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px] border border-white/20 pt-[2px] pb-[2px]">
                         <div className="w-[30%] h-[80%] flex items-center justify-center text-xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl font-black hover:rounded-xl">Upcoming</div>

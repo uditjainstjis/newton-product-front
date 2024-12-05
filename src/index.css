@@ -15,10 +15,11 @@
 
 body{
     background-color: black;
-    background-image: url('./assets/images/bg.jpg');
+    background-image: url('./assets/images/bg2.png');
     background-size: cover;
-   margin: 0rem 3rem;
+   /* margin: 0rem 3rem; */
    font-family: 'Geist';
+   margin: 0 auto;
 }
 
 .heading{
@@ -43,12 +44,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 75vh;
     color: #fff;
   }
   
   .not-found-content {
-    text-align: center;
+    margin: 0 auto;
+  }
+
+  .logo{
+    margin: 0 auto;
+    margin-bottom: 1rem;
   }
   
   .not-found-title {
@@ -61,15 +67,32 @@ body{
     font-size: 1.6rem;
     margin-bottom: 2rem;
   }
-  
-  .not-found-link {
-    color: rgba(255, 255, 255, 0.891);
-    text-decoration: none;
+
+  .section-gap{
+    margin-top: 7rem;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure the content is aligned to the bottom */
+    height: 100%;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer i {
     font-size: 1.2rem;
-    transition: 0.2s;
-  }
-  
-  .not-found-link:hover {
-    border: 1px solid white;
-    padding: 5px 8px;
-  }
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+footer i:hover {
+    transform: scale(1.1); /* Add hover effect */
+}

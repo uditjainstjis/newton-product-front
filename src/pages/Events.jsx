@@ -6,7 +6,7 @@ function Events() {
   const { id } = useParams(); // Get event ID from the URL
 
   return (
-    <div className='flex flex-col items-center justify-center ml-[6vw] w-[50vw] '>
+    <div className='flex flex-col items-center justify-center ml-[6vw] w-[50vw]' style={{margin: "0 auto"}}>
       <div className='h-[45vh] w-[75%]  m-[20px] bg-gradient-to-b from-white/10 to-white/0 backdrop-blur-[10px] border border-[#696969] rounded-[20px] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] flex items-center justify-center flex-col'>
         
         <img src={logo} alt='' className='h-[60%]'/>

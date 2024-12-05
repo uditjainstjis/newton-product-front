@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Events from "./pages/Events"
-import RegistrationForm from "./components/RegistrationForm";
+import DynamicForm from "./components/RegistrationForm";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NotFound from "./pages/NotFound";
 import Footer from "./components/footer";
@@ -19,14 +19,41 @@ function App() {
 
   if (screenWidth < 1024) {
     return (<>
-              <Navbar />
               <NotExist/>
-              <Footer />
             </>
     );
   }
 
-  
+  const jsonData = {
+    title: "damru",
+    desc: "rishihood uni @ 12pm 5/12/2024",
+    sequence: [
+      {
+        type: "Text",
+        inputName: "Your name?",
+        placeholder: "Aditya",
+        currentId: 37594.91597730944,
+      },
+      {
+        type: "Radio",
+        inputName: "Your Section?",
+        currentId: 49897.420380182135,
+        placeholder: ["A", "B", "C", "D", "E"],
+      },
+      {
+        type: "Select",
+        inputName: "Your Interest?",
+        placeholder: ["Frontend", "Backend", "Devops", "system Design", "blockchain"],
+        currentId: 83055.67261079486,
+      },
+      {
+        type: "Checkbox",
+        inputName: "Your skills?",
+        placeholder: ["Frontend", "Backend", "Devops", "system Design", "blockchain"],
+        currentId: 31706.2286880565,
+      },
+    ],
+  };
 
   return (
     <div>
@@ -36,7 +63,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events/:id" element={<Events />} /> {/* Dynamic route */}
-          <Route path="/events/register/:id" element={<RegistrationForm />} />
+          <Route path="/events/register/" element={<DynamicForm formData={jsonData}/>} />
           <Route path="*" element={<NotFound />} />        
         </Routes>
 
