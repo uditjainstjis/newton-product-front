@@ -82,7 +82,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events/:id" element={<Events />} /> {/* Dynamic route */}
-          <Route path="/events/register/" element={<DynamicForm formData={jsonData}/>} />
+          <Route path="/events/register/:id" element={<DynamicForm formData={jsonData}/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer />

@@ -1,9 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DynamicForm.css"; // Make sure this CSS file is included
+import { useParams } from "react-router-dom";
 
-const DynamicForm = ({ formData }) => {
-  const [formValues, setFormValues] = useState({});
+const DynamicForm = () => {
+  const [formValues, setFormValues] = useState([]);
+  const {id} = useParams()
 
+
+  useEffect(() => {
+    // debugger;
+    fetch("https://backend-newton-product-non-admin-1.onrender.com/api/events")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.data, "form data", id);
+        const result = data.data.find((item) => {
+          console.log(item._id, id, "item.registrationForm.id", item._id === id);
+          
+          return item._id === id
+        }); 
+        setFormValues(result || []);
+        
+        return result ? result.registrationForm : null;
+        
+        
+      
+      })
+      .catch((error) => {
+        console.error("Error fetching events:", error);
+      });
+  }, []);
   const handleChange = (e, type) => {
     const { name, value, checked } = e.target;
 
@@ -31,11 +56,13 @@ const DynamicForm = ({ formData }) => {
   return (
     <div className="form-container">
       <div className="form-header">
-        <h1>{formData.title}</h1>
-        <p>{formData.desc}</p>
+        <h1>{formValues?.registrationForm?.title}</h1>
+        <p>{formValues?.registrationForm?.description}</p>
       </div>
       <form onSubmit={handleSubmit}>
-        {formData.sequence.map((field) => {
+        {console.log(formValues?.registrationForm, "formValues")
+        }
+        {formValues?.registrationForm?.sequence?.map((field) => {
           switch (field.type) {
             case "Text":
               return (
