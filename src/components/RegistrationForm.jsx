@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./DynamicForm.css"; // Make sure this CSS file is included
 import { useParams } from "react-router-dom";
-
 const DynamicForm = () => {
   const [formValues, setFormValues] = useState([]);
   const {id} = useParams()
-
-
   useEffect(() => {
     // debugger;
     fetch("https://backend-newton-product-non-admin-1.onrender.com/api/events")
@@ -15,15 +12,10 @@ const DynamicForm = () => {
         console.log(data.data, "form data", id);
         const result = data.data.find((item) => {
           console.log(item._id, id, "item.registrationForm.id", item._id === id);
-          
           return item._id === id
-        }); 
+        });
         setFormValues(result || []);
-        
         return result ? result.registrationForm : null;
-        
-        
-      
       })
       .catch((error) => {
         console.error("Error fetching events:", error);
@@ -31,7 +23,6 @@ const DynamicForm = () => {
   }, []);
   const handleChange = (e, type) => {
     const { name, value, checked } = e.target;
-
     if (type === "Checkbox") {
       setFormValues((prev) => ({
         ...prev,
@@ -47,12 +38,10 @@ const DynamicForm = () => {
       }));
     }
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formValues);
   };
-
   return (
     <div className="form-container">
       <div className="form-header">
@@ -68,13 +57,19 @@ const DynamicForm = () => {
               return (
                 <div className="form-field" key={field.currentId}>
                   <label>{field.inputName}</label>
-                  <input
-                    type="text"
+                  {field.inputName.includes("email") || field.inputName.includes("Email") || field.inputName.includes("mail") || field.inputName.includes("Mail")? <input
+                    type="email"
                     name={field.inputName}
                     placeholder={field.placeholder}
                     onChange={handleChange}
                     className="text-input"
-                  />
+                  /> : <input
+                  type="text"
+                  name={field.inputName}
+                  placeholder={field.placeholder}
+                  onChange={handleChange}
+                  className="text-input"
+                />}
                 </div>
               );
             case "Radio":
@@ -144,5 +139,4 @@ const DynamicForm = () => {
     </div>
   );
 };
-
 export default DynamicForm;

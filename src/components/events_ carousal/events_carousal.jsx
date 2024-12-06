@@ -60,13 +60,27 @@ function EventSlider() {
       modules={[EffectCoverflow, Navigation]}
       className="mySwiper"
     >
-      {events.map((event) => (
+      {events.map((event) => { 
+
+          const [year, monthNumber, monthDate] = event.day.split("-"); 
+                                      
+          const monthNames = [
+          "January", "February", "March", "April", "May", "June", 
+          "July", "August", "September", "October", "November", "December"
+          ];
+
+          const monthName = monthNames[parseInt(monthNumber, 10) - 1];
+        
+        return(
         <SwiperSlide style={{ boxShadow: "2px 3px 10px rgba(0,0,0,.5)"}} key={event._id} className="bg-white ml-[8px] h-[15vh]">
-          <div className='items-center justify-center m-[10px] w-[10vh] h-[10vh]'>
-            <img src={event.image} alt="Event logo" />
-          </div>
+            <img style={{width:"100%", height:"100%", position:"absolute", borderRadius:"20px"}} src={event.image} alt="Event logo" />
+          
+
+            <div style={{position:"absolute", zIndex:10, background:"rgba(0,0,0,.2)", height:"100%", width:"100%", borderRadius:"20px", backdropFilter:"blur(.7px)"}} ></div>
+          <div style={{position:"absolute", background:"linear-gradient(to bottom, transparent, black)", width:"100%", bottom:"-1px", height:"70%", borderBottomLeftRadius:"20px", borderBottomRightRadius:"20px", display:"flex", justifyContent:"end", alignItems:"center", flexDirection:"column", paddingBottom:"1rem", zIndex:100}} >
+
           <div className='event-info'>
-            {event.day}
+            <span>{monthDate} {monthName}, {year}</span>
           </div>
           <div className='button-container'>
             <button
@@ -78,12 +92,14 @@ function EventSlider() {
             <button
               className='learn-more-button'
               onClick={() => handleRedirect(event._id)}
+              style={{color:"white"}}
             >
               Learn More
             </button>
           </div>
+          </div>
         </SwiperSlide>
-      ))}
+  )})}
     </Swiper>
   );
 }

@@ -103,12 +103,12 @@ function Activities() {
                       <br />
                       <span className="text-3xl">{monthName}</span>
                     </div>
-                    <div className="add w-[20%] pl-[15px] pr-[5px]">
-                      <div className="time text-sm flex items-center mb-3">
+                    <div className="add w-[20%] pl-[35px] pr-[5px]">
+                      <div className="time text-xl flex items-center mb-3">
                         <img src={time} alt="time" className="h-5 w-5 pr-[4px]" />
                         {event.time}
                       </div>
-                      <div className="location text-sm flex items-center">
+                      <div className="location text-xl flex items-center">
                         <img src={location} alt="location" className="h-5 w-5 pr-[4px]" />
                         {event.address}
                       </div>

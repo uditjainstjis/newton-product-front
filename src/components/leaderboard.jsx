@@ -2,15 +2,15 @@ import time from "../assets/time.svg"
 import location from "../assets/location.svg"
 import { useState,useEffect } from "react";
 function Leaderboard() {
-      const [events, setEvents] = useState([]); // Initially set the dummy data
+      const [events, setEvents] = useState([]); 
   useEffect(() => {
     fetch("https://backend-newton-product-non-admin-1.onrender.com/api/events")
       .then((response) => response.json())
       .then((data) => {
-        // Filter events where ActivatedForCarousel is true
+        
         setEvents(data.data);
         console.log(data.data);
-        // Log the filtered events
+        
       })
       .catch((error) => {
         console.error("Error fetching events:", error);
@@ -21,19 +21,20 @@ function Leaderboard() {
             <div className="text-white text-center text-5xl mt-[2vw] mb-[2vw] heading">Leaderboard</div>
             <div className="h-[5vh] w-[80%] flex items-center justify-center mb-[8px]">
             <div className="h-[2.2vw] w-[70%]  flex items-center justify-evenly bg-white/15 backdrop-blur-[15px] shadow-xl rounded-[10px] pl-[10px] pr-[10px] pt-[2px] pb-[2px] border border-white/20">
+            <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-xl transition-all duration-150 hover:bg-white hover:text-black rounded-xl bg-white text-black">All</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center text-xl text-white transition-all duration-150 hover:bg-white hover:text-black cursor-pointer rounded-xl">Chola</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Maratha</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Rajputana</div>
                         <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">Vijaya</div>
-                        <div className="w-[30%] h-[80%] flex items-center justify-center cursor-pointer text-xl text-white transition-all duration-150 hover:bg-white hover:text-black rounded-xl">All</div>
+                       
                     </div>
-                    <div className="ml-auto">
+                    {/* <div className="ml-auto">
                         <select className=" text-xl w-[80px] h-[30px] text-center bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
                             <option>Week</option>
                             <option>This week</option>
                             <option value="">Last week</option>
                         </select>
-                    </div>
+                    </div> */}
                 </div>
             <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-2xl border border-white/20 shadow-xl h-[50vh] w-[80%] pt-[20px] pb-[20px] pl-[20px] pr-[20px]">
                 <div className="grid place-items-center gap-12 overflow-y-scroll h-[100%] scrollbar-hide pt-[5px]">
@@ -57,17 +58,17 @@ function Leaderboard() {
                             <br />
                           <span className="text-3xl">{monthName}</span>
                       </div>
-                         <div className="add w-[20%] pl-[15px] pr-[5px]">
-                                    <div className="time text-sm flex items-center mb-3">
+                         <div className="add w-[20%] pl-[35px] pr-[5px]">
+                                    <div className="time text-xl flex items-center mb-3">
                                     <img src={time} alt='time' className='h-5 w-5 pr-[4px]' />
                                     {event.time}
                                     </div>
-                                    <div className="location text-sm flex items-center">
+                                    <div className="location text-l flex items-center">
                                     <img src={location} alt='location' className='h-5 w-5 pr-[4px]' />
                                     {event.address}
                                     </div>
                                 </div>
-                         <div className="desc w-[50%] pl-[10px] border-r pr-[10px]">
+                         <div className="desc w-[50%] pl-[10px] pr-[10px]">
                              <div className="event_name text-2xl font-black" style={{ fontWeight: '900' }}>{event.name}</div>
                              <div className="event_desc text-[#BDB3B3] text-[0.875rem]">{event.description}</div>
                          </div>
